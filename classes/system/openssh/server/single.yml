@@ -15,6 +15,7 @@ parameters:
           enabled: true
           name: sbraun
           home: /home/sbraun
+          sudo: true
   openssh:
     server:
       permit_root_login: true
