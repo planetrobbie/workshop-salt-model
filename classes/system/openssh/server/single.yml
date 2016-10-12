@@ -11,9 +11,22 @@ parameters:
           # Password is cloudlab, comment out, configure your SSH key bellow
           # and disable password auth
           # password: $6$0Qqj.6l.$T9k9Onm9pIDo6ULABVBRNogyizG.9CnwQ4bvI4xH.AWeIGHbLyFU87ejMTtKvAAyd3dncRYbeUV.VbnXJU2u./
+        sbraun:
+          enabled: true
+          name: sbraun
+          home: /home/sbraun
   openssh:
     server:
       permit_root_login: true
+      user:
+        sbraun:
+          enabled: true
+          user: ${linux:system:user:sbraun}
+          public_keys:
+          - ${public_keys:sbraun}
+  public_keys:
+    sbraun:
+      key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCdvb2aPES+H5+McRueB3EYbpdG/685pIJCH6mbFmTsIHlQobcJSSYtqww7ji/m6/KuMGE/Wc5f06d5v+beslfHKLaaAKXwWBpDgO77zwO42PbFPreFXKg8sNLPmqB+WEyIX7yAaJNxz0bbQgo2Vl3Bhtv/79zZXpzo0DIXNtdi75vwzWpuiyRuhC7pNqz+VXFZAVtkA+EchogDnT7rLa8ullSwuSgk5iPC6/XsuwL5Z5/UGBx4OT9Y8+cjb3g2oE9N3hdJH8wp9ts6stvKgAZ/5EE+LuCVhtKCvQ0sbZY8DmH99HFIP7SQoNQoyD8ALKbyCxGdF4/kxsqSlnLM5bR sebbraun@gmail.com
 #      password_auth: true
 #      user:
 #        root:
