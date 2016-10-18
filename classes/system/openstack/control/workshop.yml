@@ -66,6 +66,7 @@ parameters:
       workers: 1
   nova:
     controller:
+      cpu_allocation_ratio: 8
       networking: contrail
       bind:
         private_address: ${_param:cluster_local_address}

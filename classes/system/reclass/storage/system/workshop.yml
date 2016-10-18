@@ -13,7 +13,7 @@ parameters:
           params:
             salt_master_host: ${_param:reclass_config_master}
             single_address: 172.16.10.101
-            keepalived_vip_interface: eth1
+            keepalived_vip_interface: eth0
             keepalived_vip_priority: 103
             mysql_cluster_role: master
             rabbitmq_cluster_role: master
@@ -29,7 +29,7 @@ parameters:
           params:
             salt_master_host: ${_param:reclass_config_master}
             single_address: 172.16.10.102
-            keepalived_vip_interface: eth1
+            keepalived_vip_interface: eth0
             keepalived_vip_priority: 102
             mysql_cluster_role: slave
             rabbitmq_cluster_role: slave
@@ -45,7 +45,7 @@ parameters:
           params:
             salt_master_host: ${_param:reclass_config_master}
             single_address: 172.16.10.103
-            keepalived_vip_interface: eth1
+            keepalived_vip_interface: eth0
             keepalived_vip_priority: 101
             mysql_cluster_role: slave
             rabbitmq_cluster_role: slave
@@ -61,7 +61,7 @@ parameters:
             single_address: 172.16.10.105
             opencontrail_compute_address: 172.16.10.105
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
         cmp02.workshop.cloudlab.cz:
           name: cmp02
           domain: workshop.cloudlab.cz
@@ -73,7 +73,7 @@ parameters:
             single_address: 172.16.10.106
             opencontrail_compute_address: 172.16.10.106
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
         web01.workshop.cloudlab.cz:
           name: web01
           domain: workshop.cloudlab.cz
@@ -120,7 +120,7 @@ parameters:
             single_address: 172.16.10.109
             opencontrail_compute_address: 172.16.10.109
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
             ovs_hypervisor_name: ovscmp01
             ovs_rabbitmq_cluster_role: master
           parameters:
@@ -145,7 +145,7 @@ parameters:
             single_address: 172.16.10.116
             opencontrail_compute_address: 172.16.10.116
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
             ovs_hypervisor_name: ovscmp02
             ovs_rabbitmq_cluster_role: slave
           parameters:
@@ -167,7 +167,7 @@ parameters:
             single_address: 172.16.10.111
             opencontrail_compute_address: 172.16.10.111
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
             ovs_hypervisor_name: ovscmp03
             ovs_rabbitmq_cluster_role: slave
           parameters:
@@ -189,7 +189,7 @@ parameters:
             single_address: 172.16.10.112
             opencontrail_compute_address: 172.16.10.112
             opencontrail_compute_gateway: 172.16.10.1
-            opencontrail_compute_iface: eth1
+            opencontrail_compute_iface: eth0
             ovs_hypervisor_name: ovscmp04
             ovs_rabbitmq_cluster_role: slave
         log01.workshop.cloudlab.cz:

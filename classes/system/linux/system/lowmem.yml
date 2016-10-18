@@ -5,7 +5,7 @@ parameters:
     storage:
       swap:
         swap01:
-          enabled: false
+          enabled: true
           engine: file
           device: /var/tmp/swap01
           size: 2048
